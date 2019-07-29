@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:BasePage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Ratatul.UI.Pages;assembly=Ratatul"
+             xmlns:controls="clr-namespace:Ratatul.UI.Controls"
+			 x:Class="Ratatul.UI.Pages.Main.MainPage"
+             Title="Camera">
+
+	<StackLayout>
+
+		<Image HorizontalOptions="Center" VerticalOptions="Center"
+				           WidthRequest="490" HeightRequest="490"
+				           Source="{Binding SampleObject.ImageUrl}"/>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+
+			<Button
+				Grid.Row="0"
+				Grid.Column="0"
+				Text="История"
+				Command="{Binding SampleCommand}"/>
+
+			<Button
+				Grid.Row="0"
+				Grid.Column="1"
+				Text="Сделать фото"/>
+
+
+			<Button
+				Grid.Row="0"
+				Grid.Column="2"
+				Text="Поиск"
+				Command="{Binding AloCommand}"/>
+		</Grid>
+
+	</StackLayout>
+
+
+</pages:BasePage>

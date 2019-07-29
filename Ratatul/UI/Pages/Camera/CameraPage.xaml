@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page:BasePage
+		     xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 xmlns:page="clr-namespace:Ratatul.UI.Pages;assembly=Ratatul"
+             x:Class="Ratatul.UI.Pages.Camera.CameraPage"
+			 Title="History">
+	
+	
+</page:BasePage>

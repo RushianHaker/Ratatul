@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <FileUpgradeFlags>40</FileUpgradeFlags>
+    <UpgradeBackupLocation>D:\Ratatul\Backup\Ratatul\</UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="BL\BusinessServices\**" />
+    <Compile Remove="BL\ViewModels\Новая папка1\**" />
+    <Compile Remove="BL\ViewModels\Новая папка\**" />
+    <EmbeddedResource Remove="BL\BusinessServices\**" />
+    <EmbeddedResource Remove="BL\ViewModels\Новая папка1\**" />
+    <EmbeddedResource Remove="BL\ViewModels\Новая папка\**" />
+    <None Remove="BL\BusinessServices\**" />
+    <None Remove="BL\ViewModels\Новая папка1\**" />
+    <None Remove="BL\ViewModels\Новая папка\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.0.4" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+    <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.264807" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ratatul.DAL\Ratatul.DAL.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="UI\Pages\Camera\CameraPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="UI\Pages\Main\MainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="UI\Pages\Menu\MenuPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="UI\Pages\Search\SearchPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="UI\Pages\Main\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+</Project>
